@@ -1,0 +1,60 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<div class="text-center mt-5">
+
+    <h1 class="display-4 fw-bold">🏨 Hostel Management System</h1>
+    <p class="text-muted">Manage rooms, complaints, and fees efficiently</p>
+
+</div>
+
+<!-- Cards Section -->
+<div class="row mt-5 text-center">
+
+    <div class="col-md-4">
+        <div class="card bg-success text-white p-4 shadow-lg">
+            <h3>📝 Add Complaint</h3>
+            <p>Report maintenance issues quickly</p>
+            <a href="/add/" class="btn btn-light">Go</a>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card bg-info text-white p-4 shadow-lg">
+            <h3>📋 View Complaints</h3>
+            <p>Track complaint status</p>
+            <a href="/view/" class="btn btn-light">Go</a>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card bg-warning text-dark p-4 shadow-lg">
+            <h3>📊 Dashboard</h3>
+            <p>View analytics and stats</p>
+            <a href="/dashboard/" class="btn btn-dark">Go</a>
+        </div>
+    </div>
+
+</div>
+
+<!-- Extra Section -->
+<div class="row mt-5 text-center">
+
+    <div class="col-md-6">
+        <div class="card bg-primary text-white p-4 shadow">
+            <h4>💰 Fee Management</h4>
+            <a href="/fee/" class="btn btn-light mt-2">Check Fees</a>
+        </div>
+    </div>
+
+    <div class="col-md-6">
+        <div class="card bg-secondary text-white p-4 shadow">
+            <h4>👤 Profile</h4>
+            <p>Manage your details</p>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

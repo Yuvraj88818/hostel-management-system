@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h2 class="text-center mb-4">📊 Dashboard</h2>
+
+<div class="row text-center">
+
+    <div class="col-md-4">
+        <div class="card bg-primary text-white p-4 shadow">
+            <h4>Total Complaints</h4>
+            <h2>{{ total }}</h2>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card bg-warning text-dark p-4 shadow">
+            <h4>Pending</h4>
+            <h2>{{ pending }}</h2>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card bg-success text-white p-4 shadow">
+            <h4>Resolved</h4>
+            <h2>{{ resolved }}</h2>
+        </div>
+    </div>
+
+</div>
+
+{% endblock %}

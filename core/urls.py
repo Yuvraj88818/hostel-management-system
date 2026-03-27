@@ -22,14 +22,23 @@ from django.contrib.auth import views as auth_views
 urlpatterns = [
     path('admin/', admin.site.urls),
 
+    # HOME
     path('', views.home, name='home'),
+
+    # COMPLAINT
     path('add/', views.add_complaint, name='add_complaint'),
     path('view/', views.view_complaints, name='view_complaints'),
-    path('dashboard/', views.dashboard, name='dashboard'),  # 🔥 ADD THIS
 
-    # Login / Logout
+    # DASHBOARD
+    path('dashboard/', views.dashboard, name='dashboard'),
+
+    # FEE
+    path('fee/', views.fee_status, name='fee'),
+
+    # AUTH
     path('login/', auth_views.LoginView.as_view(template_name='login.html'), name='login'),
     path('logout/', auth_views.LogoutView.as_view(next_page='login'), name='logout'),
-    
+
+    # REGISTER
     path('register/', views.register, name='register'),
 ]

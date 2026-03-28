@@ -14,7 +14,7 @@ class Room(models.Model):
 
 # Student Model
 class Student(models.Model):
-    user = models.OneToOneField(User, on_delete=models.CASCADE, null=True)
+    user = models.OneToOneField(User, on_delete=models.CASCADE)  # 🔥 IMPORTANT
     name = models.CharField(max_length=100)
     email = models.EmailField(unique=True)
     phone = models.CharField(max_length=15)

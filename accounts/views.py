@@ -34,7 +34,6 @@ def view_complaints(request):
     complaints = Complaint.objects.filter(student=request.user.student)
     return render(request, 'view_complaints.html', {'complaints': complaints})
 
-
 # ------------------ DASHBOARD ------------------
 
 @login_required
@@ -56,9 +55,14 @@ def dashboard(request):
 
 @login_required
 def fee_status(request):
-    fees = Fee.objects.filter(student=request.user.student)
-    return render(request, 'fee.html', {'fees': fees})
+    student = getattr(request.user, 'student', None)
 
+    if not student:
+        return redirect('login')
+
+    fees = Fee.objects.filter(student=student)
+
+    return render(request, 'fee.html', {'fees': fees})
 
 # ------------------ REGISTRATION ------------------
 

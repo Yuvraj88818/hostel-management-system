@@ -1,0 +1,9 @@
+<h2>All Complaints</h2>
+
+<ul>
+    {% for complaint in complaints %}
+        <li>
+            {{ complaint.issue }} - {{ complaint.status }}
+        </li>
+    {% endfor %}
+</ul>

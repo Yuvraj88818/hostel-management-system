@@ -8,4 +8,5 @@ urlpatterns = [
     path('dashboard/', views.dashboard, name='dashboard'),
     path('fee/', views.fee_status, name='fee'),
     path('register/', views.register, name='register'),
+    path('receipt/<int:id>/', views.receipt, name='receipt'),
 ]
